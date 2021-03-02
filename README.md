@@ -29,6 +29,9 @@ Please refer to [this action verb list](https://tips.uark.edu/blooms-taxonomy-ve
 - [ ] :speaking_head: Tell students that giving a `name` to your inputs is going to be extremely helpful for a number of things
 - [ ] :computer: Add `name` attributes to all your inputs
 
+**Pass the Tests**
+- [ ] :computer: Run the test suite and have students navigate you until all are passing
+
 **labels** _(5 mins)_
 - [ ] :speaking_head: Tell students that it would be good to have some labels for our inputs
 - [ ] :exclamation: Advise students that even if they don't want to add them, labels are important for accessibility so do it anyway!
@@ -40,8 +43,8 @@ Please refer to [this action verb list](https://tips.uark.edu/blooms-taxonomy-ve
 - [ ] :speaking_head: Tell students that one way of defining what will happen when the form is submitted is to define the 'action' attribute on the form
 - [ ] :speaking_head: Tell students we usually use this if we want to point to another page for the form processing
 - [ ] :computer: Make a basic `/thankyou` page and point the action there
-- [ ] :computer: Make an `updateHeader` function and change the action to `javascript:updateHeader()` citing this as an option
-- [ ] :exclamation: Advise students that the support for `javascript:` in action is a bit patchy and not common practice
+- [ ] :computer: Change the action to `javascript:updateHeader()` citing this as an option
+- [ ] :exclamation: Advise students that the support for `javascript:` in `action` is a bit patchy and not common practice
 - [ ] :speaking_head: Tell students we can alternatively add an event listener to the form, listening for the 'submit' event
 - [ ] :computer: Have students navigate you adding a listener to the form submit that logs a message
 - [ ] :speaking_head: Remove the form's `action` and students that we will use just the one page for this and update the content using just JavaScript
@@ -63,7 +66,7 @@ Please refer to [this action verb list](https://tips.uark.edu/blooms-taxonomy-ve
 - [ ] :computer: Identify the properties of the event object you'll need - probably `preventDefault` and `target` with input(s)
 - [ ] :speaking_head: Tell students that we are not testing the functionality of the preventDefault, just giving our function something to invoke
 - [ ] :computer: Create a stub eg. `eventStub = { preventDefault: () => {}, target: { firstName: "Bob" } }`
-- [ ] :speaking_head: Tell students that we could also assign preventDefault to `jest.fn` and we will talk more about making use of these jest functions later in the course
+- [ ] :speaking_head: Tell students that we could also assign preventDefault to `jest.fn`
 - [ ] :computer: Write a test for your listener function using the stub
 
 ---
@@ -101,6 +104,11 @@ Please refer to [this action verb list](https://tips.uark.edu/blooms-taxonomy-ve
 - [ ] :computer: Have students navigate you on triggering this on the submit event (always getting `getfutureproof`)
 - [ ] :computer: Have students navigate you on updating this to dynamically get different users
 - [ ] :computer: Have students navigate you on having this update the page to show a piece of the received data
+
+**async/await**
+- [ ] :speaking_head: Tell students that we now how an alternative to Promise chaining: async/await
+- [ ] :speaking_head: Tell students that we will look at this more tomorrow too but we will briefly use it today
+- [ ] :computer: Refactor the function to use async/await, walking through your changes
 
 **fetch errors** _(10 mins)_
 - [ ] :computer: Update the url to mispell 'github'
@@ -144,12 +152,14 @@ Please refer to [this action verb list](https://tips.uark.edu/blooms-taxonomy-ve
 - [ ] :computer: Stub a test of 'it returns the user\'s repo count on a successful request'
 - [ ] :grey_question: Ask students if the response value of `fetch` matters in that test _(yes)_
 - [ ] :computer: Add `fetch.mockResponseOnce(JSON.stringify({ "public_repos": 100 }))` to the test and ask students what they think it is doing
+- [ ] :grey_question: Ask students if they think we need to wait for the result of the fetch before making this assertion _(yes)_
+- [ ] :computer: Make the test cb `async` and `await` the function call
 - [ ] :computer: Stub a test of 'it returns an error message on an unsuccessful request'
 - [ ] :computer: Add `fetch.mockReject(new Error('Fake disaster'))` to the test and ask students what they think it is doing
 
 
 **Mocking axios & other libraries** _(5 mins)_
-- [ ] :exclamation: Tell students that we can also mock `axios` (and any other library we have installed) with `jest.mock` which we will at more soon
+- [ ] :exclamation: Tell students that we can also mock `axios` (and any other library we have installed) with `jest.mock` which we will at more soon but axios does have a special mock library like `jest-fetch-mock` called `jest-mock-axios`
 - [ ] :exclamation: Advise students that it is worth practicing use fetch and jest-fetch-mock for now but they can use documentation if they want to visit this early
 
 ---
