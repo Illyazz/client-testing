@@ -1,0 +1,23 @@
+{
+  "name": "fp_lecture_notes_forms_and_apis",
+  "version": "1.0.0",
+  "description": "Forms & APIs Demo",
+  "scripts": {
+    "test": "jest --watchAll",
+    "coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getfutureproof-instructors/fp_lecture_notes_forms_and_apis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getfutureproof-instructors/fp_lecture_notes_forms_and_apis/issues"
+  },
+  "homepage": "https://github.com/getfutureproof-instructors/fp_lecture_notes_forms_and_apis#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
