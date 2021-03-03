@@ -1,5 +1,8 @@
+const handlers = require('./handlers');
+
 function init(){
-    // init binders & listeners here
+    const modeCheck = document.getElementById('dark-mode');
+    modeCheck.addEventListener('click', handlers.switchMode)
 }
 
-init();
+init()

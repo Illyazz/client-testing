@@ -33,6 +33,34 @@ form {
     color: rebeccapurple;
 }
 
+.light {
+    background-color: white;
+    color: rgba(59, 126, 126, 0.7);
+}
+
+.light header {
+    background-color: (0,0,0,0.4);
+    color: white;
+}
+
+.light header h3 {
+    color: white;
+}
+
+.dark {
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+}
+
+.dark header {
+    background-color: white;
+    color: rebeccapurple;
+}
+
+.dark header h3 {
+    color: rgba(59, 126, 126, 0.7);
+}
+
 .error {
     background-color: red;
     color: white;
